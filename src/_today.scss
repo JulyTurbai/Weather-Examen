@@ -1,0 +1,39 @@
+.today-weather {
+    width: 800px;
+    height: 600px;
+    margin: 20px auto;
+    border: 2px solid silver;
+    .current {
+        max-width: 100%;
+        height: 100px;
+        background-color: aliceblue;
+        .main {
+            @include flex;
+            justify-content: space-between;
+            height: 40px
+        }
+        .main__block {
+            @include flex;
+            justify-content: space-between;
+            align-items: center;
+            .day-descr {
+                font-size: 12px;
+                p {
+                    margin-right: 20px
+                }
+                .sunrise {
+                    @include flex;
+                    justify-content: flex-start
+                }
+                .sunset {
+                    @include flex;
+                    justify-content: flex-start
+                }
+                .duration{
+                    @include flex;
+                    justify-content: flex-start
+                }
+            }
+        }
+    }
+}
