@@ -1,0 +1,138 @@
+.anothers {
+    width: 800px;
+    height: 300px;
+    background-color: rgb(194, 240, 197);
+    margin: 0px auto;
+    border-radius: 20px;
+    margin-top: 30px;
+    .days {
+        @include flex;
+        font-size: 15px;
+        .day {
+            @include flex;
+            width: 130px;
+            height: 200px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border-radius: 15px;
+            margin-right: 20px;
+            background-color: rgba(138, 202, 130, 0.664);
+            &__name {
+                margin-bottom: 10px;
+            }
+            &__data {
+                margin-bottom: 90px;
+            }
+        }
+        .day--last {
+            @include flex;
+            width: 130px;
+            height: 200px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border-radius: 15px;
+            margin-right: 0px;
+            background-color: rgba(138, 202, 130, 0.664);
+        }
+    }
+    .hourly {
+        margin-top: 30px;
+        width: 100%;
+        background-color: rgb(194, 240, 197);
+        padding: 20px 20px;
+        border-radius: 20px;
+       .info {
+         .hours {
+            &__name {
+                height:0px;
+                font-size: 15px;
+            }
+            .time {
+                @include flex;
+                margin-left: 200px;
+                &__weather {
+                    @include flex;
+                    width: 100px;
+                }
+                &__hour {
+                    margin-right: 90px;
+                    font-size: 13px
+                }
+            }
+         }
+       }
+       .description {
+        margin-top: 20px;
+            .forecast {
+            @include flex;
+                .block {
+                    @include flex;
+                    margin-left: 60px;
+                }
+                &_name {
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    font-size: 15px;
+                }
+                &_status {
+                    margin-right: 50px;
+                    font-size: 13px;
+                    width: 50px;
+                    @include flex;
+                }
+            }
+            .temperature {
+                margin-top: 30px;
+                &_name {
+                    height: 0px;
+                    width: 70px;
+                    font-size: 15px;
+                }
+                .block {
+                    @include flex;
+                    margin-left: 105px;
+                }
+                &_degrees {
+                    width: 100px;
+                    @include flex;
+                    font-size: 14px;
+                }
+                &_degrees--last {
+                    width: 70px;
+                }
+            }
+        }
+        .feel {
+            &_name {
+                height: 0px;
+                width: 70px;
+                font-size: 15px;
+            }
+            .block {
+                @include flex;
+                margin-left: 105px;
+            }
+            &_temp {
+                width: 100px;
+                @include flex;
+                font-size: 14px;
+            }
+        }
+        .wind {
+            &_name {
+                height: 0px;
+                width: 90px;
+                font-size: 15px;
+            }
+            .block {
+                @include flex;
+                margin-left: 105px;
+            }
+            &_km {
+                width: 100px;
+                @include flex;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -17,11 +17,24 @@ ul {
   list-style-type: none;
 }
 
+.hide {
+  display: none;
+}
+
+img {
+  width: 70px;
+}
+
+.active {
+  background-color: rgba(149, 223, 160, 0.719);
+}
+
 .wrapper {
   width: 900px;
-  height: 770px;
+  height: 970px;
   margin: 0px auto;
-  background-color: rgb(160, 187, 197);
+  background-color: rgb(227, 252, 220);
+  border-radius: 20px;
 }
 
 .header {
@@ -39,14 +52,54 @@ ul {
           justify-content: space-between;
   max-width: 100%;
   height: 80px;
-  background-color: rgb(215, 232, 245);
+  background-color: rgba(15, 63, 27, 0.623);
   padding: 0 30px;
+  border-radius: 20px 20px 0 0;
 }
 .header .logo {
   text-transform: uppercase;
   font-weight: bold;
-  color: rgb(98, 131, 143);
+  color: rgb(255, 255, 255);
   font-size: 25px;
+}
+.header form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header fieldset {
+  border-radius: 20px;
+  border: none;
+}
+.header input {
+  border-radius: 20px;
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  background-color: rgba(213, 247, 216, 0.801);
+  margin-right: 10px;
+}
+.header input:focus {
+  border: none;
+}
+.header button {
+  border-radius: 20px;
+  width: 70px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(74, 97, 69, 0.76);
+  color: white;
+}
+.header button:hover {
+  background-color: rgb(97, 161, 111);
 }
 
 .menu {
@@ -64,7 +117,7 @@ ul {
           justify-content: flex-start;
   max-width: 100%;
   height: 50px;
-  background-color: rgb(61, 80, 90);
+  background-color: rgb(47, 66, 45);
   padding: 0px 50px;
 }
 .menu .today {
@@ -81,9 +134,11 @@ ul {
   height: 50px;
   margin-right: 30px;
   cursor: pointer;
+  color: white;
+  border-radius: 10px;
 }
 .menu .today:hover {
-  background-color: rgb(144, 170, 192);
+  background-color: rgba(149, 223, 160, 0.719);
 }
 .menu .another {
   display: -webkit-box;
@@ -99,23 +154,24 @@ ul {
   height: 50px;
   margin-right: 30px;
   cursor: pointer;
+  color: white;
+  border-radius: 10px;
 }
 .menu .another:hover {
-  background-color: rgb(144, 170, 192);
+  background-color: rgba(149, 223, 160, 0.719);
 }
 
-.today-weather {
+.today {
   width: 800px;
-  height: 600px;
+  height: 800px;
   margin: 20px auto;
-  border: 2px solid silver;
 }
-.today-weather .current {
+.today .current {
   max-width: 100%;
-  height: 100px;
-  background-color: aliceblue;
+  background-color: rgb(194, 240, 197);
+  border-radius: 20px;
 }
-.today-weather .current .main {
+.today .current .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,9 +184,10 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 40px;
+  height: 50px;
+  padding: 0 20px;
 }
-.today-weather .current .main__block {
+.today .current .main__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,14 +201,190 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   align-items: center;
+  padding: 20px 50px;
 }
-.today-weather .current .main__block .day-descr {
+.today .current .main__block .position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.today .current .main__block .position__descr {
+  margin-top: 20px;
+}
+.today .current .main__block .temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.today .current .main__block .temp__deg {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.today .current .main__block .day-descr {
   font-size: 12px;
+  margin-bottom: 5px;
 }
-.today-weather .current .main__block .day-descr p {
+.today .current .main__block .day-descr p {
+  margin-right: 30px;
+}
+.today .current .main__block .day-descr .sunrise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.today .current .main__block .day-descr .sunrise p {
+  width: 80px;
+}
+.today .current .main__block .day-descr .sunset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.today .current .main__block .day-descr .sunset p {
+  width: 80px;
+}
+.today .current .main__block .day-descr .duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.today .current .main__block .day-descr .duration p {
+  width: 80px;
+}
+.today .hourly {
+  margin-top: 30px;
+  width: 100%;
+  background-color: rgb(194, 240, 197);
+  padding: 15px 20px;
+  border-radius: 20px;
+}
+.today .hourly .info .hours__name {
+  height: 0px;
+  font-size: 15px;
+}
+.today .hourly .info .hours .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 160px;
+}
+.today .hourly .info .hours .time__weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100px;
+}
+.today .hourly .info .hours .time__weather img {
+  width: 50px;
+  margin-top: 30px;
+}
+.today .hourly .info .hours .time__hour {
+  margin-right: 90px;
+  font-size: 13px;
+}
+.today .hourly .description {
+  margin-top: 10px;
+}
+.today .hourly .description .forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.today .hourly .description .forecast .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 60px;
+}
+.today .hourly .description .forecast_name {
   margin-right: 20px;
+  margin-left: 20px;
+  font-size: 15px;
 }
-.today-weather .current .main__block .day-descr .sunrise {
+.today .hourly .description .forecast_status {
+  margin-right: 50px;
+  font-size: 13px;
+  width: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,11 +394,16 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
-.today-weather .current .main__block .day-descr .sunset {
+.today .hourly .description .temperature {
+  margin-top: 30px;
+}
+.today .hourly .description .temperature_name {
+  height: 0px;
+  width: 70px;
+  font-size: 15px;
+}
+.today .hourly .description .temperature .block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,11 +413,10 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  margin-left: 105px;
 }
-.today-weather .current .main__block .day-descr .duration {
+.today .hourly .description .temperature_degrees {
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,8 +426,372 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  font-size: 14px;
+}
+.today .hourly .description .temperature_degrees--last {
+  width: 70px;
+}
+.today .hourly .feel_name {
+  height: 0px;
+  width: 70px;
+  font-size: 15px;
+}
+.today .hourly .feel .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 105px;
+}
+.today .hourly .feel_temp {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+.today .hourly .wind_name {
+  height: 0px;
+  width: 90px;
+  font-size: 15px;
+}
+.today .hourly .wind .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 105px;
+}
+.today .hourly .wind_km {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+.today .nearby-places {
+  min-height: 20px;
+  background-color: aliceblue;
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: rgb(194, 240, 197);
+  padding: 20px;
+}
+.today .nearby-places__name {
+  font-weight: bold;
+}
+.today .nearby-places .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+.today .nearby-places .city {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+  padding: 10px 30px;
+  margin: 5px 5px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: rgba(116, 168, 118, 0.603);
+}
+
+.anothers {
+  width: 800px;
+  height: 300px;
+  background-color: rgb(194, 240, 197);
+  margin: 0px auto;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.anothers .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+}
+.anothers .days .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 130px;
+  height: 200px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  margin-right: 20px;
+  background-color: rgba(138, 202, 130, 0.664);
+}
+.anothers .days .day__name {
+  margin-bottom: 10px;
+}
+.anothers .days .day__data {
+  margin-bottom: 90px;
+}
+.anothers .days .day--last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 130px;
+  height: 200px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  margin-right: 0px;
+  background-color: rgba(138, 202, 130, 0.664);
+}
+.anothers .hourly {
+  margin-top: 30px;
+  width: 100%;
+  background-color: rgb(194, 240, 197);
+  padding: 20px 20px;
+  border-radius: 20px;
+}
+.anothers .hourly .info .hours__name {
+  height: 0px;
+  font-size: 15px;
+}
+.anothers .hourly .info .hours .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 200px;
+}
+.anothers .hourly .info .hours .time__weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+}
+.anothers .hourly .info .hours .time__hour {
+  margin-right: 90px;
+  font-size: 13px;
+}
+.anothers .hourly .description {
+  margin-top: 20px;
+}
+.anothers .hourly .description .forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.anothers .hourly .description .forecast .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 60px;
+}
+.anothers .hourly .description .forecast_name {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 15px;
+}
+.anothers .hourly .description .forecast_status {
+  margin-right: 50px;
+  font-size: 13px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.anothers .hourly .description .temperature {
+  margin-top: 30px;
+}
+.anothers .hourly .description .temperature_name {
+  height: 0px;
+  width: 70px;
+  font-size: 15px;
+}
+.anothers .hourly .description .temperature .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 105px;
+}
+.anothers .hourly .description .temperature_degrees {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+.anothers .hourly .description .temperature_degrees--last {
+  width: 70px;
+}
+.anothers .hourly .feel_name {
+  height: 0px;
+  width: 70px;
+  font-size: 15px;
+}
+.anothers .hourly .feel .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 105px;
+}
+.anothers .hourly .feel_temp {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+.anothers .hourly .wind_name {
+  height: 0px;
+  width: 90px;
+  font-size: 15px;
+}
+.anothers .hourly .wind .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 105px;
+}
+.anothers .hourly .wind_km {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

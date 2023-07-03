@@ -9,54 +9,139 @@
 <body>
     <div class="weather">
         <div class="wrapper">
-            <div class="header">
-                <div class="logo">My Weather</div>
-                <div class="location">
-                    <form action="">
-                        <input type="text">
-                        <button type="submit">Search</button>
-                    </form>
-                </div>
+           
+            
+            <div class="today">
+                
             </div>
-            <div class="menu">
-                <div class="today">Today</div>
-                <div class="another">5-day forecast</div>
-            </div>
-            <div class="today-weather">
-                <div class="current">
-                    <div class="current main">
-                        <div class="main__name">Поточна погода</div>
-                            <span class="main__data">21.03.2023</span>
+            <div class="anothers hide">
+                <div class="anothers days">
+                    <div class="days day">
+                        <p class="day__name">Понеділок</p>
+                        <p class="day__data">23 травня</p>
+                        <img class="day__img" src="" alt="">
+                        <p class="day__temp">23</p>
+                        <p class="day__status">Хмарно</p>
                     </div>
-                    <div class="current main__block">
-                        <div class="current position">
-                            <div class="position__img">
-                                <img src="" alt="">
+                    <div class="days day">
+                        <p class="day__name">Понеділок</p>
+                        <p class="day__data">23 травня</p>
+                        <img class="day__img" src="" alt="">
+                        <p class="day__temp">23</p>
+                        <p class="day__status">Хмарно</p>
+                    </div>
+                    <div class="days day">
+                        <p class="day__name">Понеділок</p>
+                        <p class="day__data">23 травня</p>
+                        <img class="day__img" src="" alt="">
+                        <p class="day__temp">23</p>
+                        <p class="day__status">Хмарно</p>
+                    </div>
+                    <div class="days day">
+                        <p class="day__name">Понеділок</p>
+                        <p class="day__data">23 травня</p>
+                        <img class="day__img" src="" alt="">
+                        <p class="day__temp">23</p>
+                        <p class="day__status">Хмарно</p>
+                    </div>
+                    <div class="days day--last">
+                        <p class="day__name">Понеділок</p>
+                        <p class="day__data">23 травня</p>
+                        <img class="day__img" src="" alt="">
+                        <p class="day__temp">23</p>
+                        <p class="day__status">Хмарно</p>
+                    </div>
+                </div>
+                <div class="hourly">
+                    <h3 class="hourly__name">Найближчим часом</h3>
+                    <div class="hourly info">
+                        <div class="info hours">
+                            <div class="hours__name">
+                                <p>Сьогодні</p>
                             </div>
-                            <p class="position__descr">Хмарно</p>
+                            <div class="hours time">
+                                <div class="time__weather">
+                                    <p class="time__hour">07:00</p>
+                                    <img src="" alt="">
+                                </div>
+                                <div class="time__weather">
+                                    <p class="time__hour">08:00</p>
+                                    <img src="" alt="">
+                                </div>
+                                <div class="time__weather">
+                                    <p class="time__hour">09:00</p>
+                                    <img src="" alt="">
+                                </div>
+                                <div class="time__weather">
+                                    <p class="time__hour">10:00</p>
+                                    <img src="" alt="">
+                                </div>
+                                <div class="time__weather">
+                                    <p class="time__hour">11:00</p>
+                                    <img src="" alt="">
+                                </div>
+                                <div class="time__weather">
+                                    <p class="time__hour">12:00</p>
+                                    <img src="" alt="">
+                                </div>
+                            </div>
                         </div>
-                        <div class="current temp">
-                            <span class="temp__deg">29 deg</span>
-                            <p class="temp__feel">23 deg</p>
+                    </div>
+                    <div class="hourly description">
+                        <div class="description forecast">
+                            <p class="forecast_name">Прогноз</p>
+                            <div class="block">
+                                <p class="forecast_status">Хмарно</p>
+                                <p class="forecast_status">Хмарно</p>
+                                <p class="forecast_status">Хмарно</p>
+                                <p class="forecast_status">Хмарно</p>
+                                <p class="forecast_status">Хмарно</p>
+                                <p class="forecast_status">Хмарно</p>
+                            </div>
                         </div>
-                        <div class="day-descr">
-                            <div class="day-descr sunrise">
-                                <p>Sunrise:</p>
-                                <span>07:04 pm</span>
+                        <div class="description temperature">
+                            <p class="temperature_name">Темп.</p>
+                            <div class="block">
+                                <p class="temperature_degrees">29</p>
+                                <p class="temperature_degrees">29</p>
+                                <p class="temperature_degrees">29</p>
+                                <p class="temperature_degrees">29</p>
+                                <p class="temperature_degrees">29</p>
+                                <p class="temperature_degrees">29</p>
                             </div>
-                            <div class="day-descr sunset">
-                                <p>Sunset</p>
-                                <span>07:04 pm</span>
+                        </div>
+                        <div class="description feel">
+                            <p class="feel_name">Відчувається</p>
+                            <div class="block">
+                                <p class="feel_temp">27</p>
+                                <p class="feel_temp">27</p>
+                                <p class="feel_temp">27</p>
+                                <p class="feel_temp">27</p>
+                                <p class="feel_temp">27</p>
+                                <p class="feel_temp">27</p>
                             </div>
-                            <div class="day-descr duration">
-                                <p>Duration</p>
-                                <span>23 hours</span>
+                        </div>
+                        <img src="pic/cloudy.png" alt="">
+                        <div class="description wind">
+                            <p class="wind_name">Вітер(км/год)</p>
+                            <div class="block">
+                                <p class="wind_km">11</p>
+                                <p class="wind_km">11</p>
+                                <p class="wind_km">11</p>
+                                <p class="wind_km">11</p>
+                                <p class="wind_km">11</p>
+                                <p class="wind_km">11</p>
                             </div>
-                        </div>  
-                    </div>    
+                        </div>   
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
+    <script>
+        new WeatherMaker('.wrapper', '.today').render();
+    </script>
 </body>
 </html>
+
