@@ -16,12 +16,25 @@
             flex-direction: column;
             border-radius: 15px;
             margin-right: 20px;
-            background-color: rgba(138, 202, 130, 0.664);
+            background-color: rgba(163, 219, 156, 0.664);
+            cursor: pointer;
+            img {
+                width: 50px;
+                margin-bottom: 20px;
+            }
             &__name {
                 margin-bottom: 10px;
             }
             &__data {
-                margin-bottom: 90px;
+                margin-bottom: 20px;
+                font-size: 13px;
+            }
+            &__temp {
+                font-size: 13px;
+                margin-bottom: 5px;
+            }
+            &__status {
+                font-size: 13px;
             }
         }
         .day--last {
@@ -32,7 +45,12 @@
             flex-direction: column;
             border-radius: 15px;
             margin-right: 0px;
-            background-color: rgba(138, 202, 130, 0.664);
+            background-color: rgba(163, 219, 156, 0.664);
+            cursor: pointer;
+            img {
+                width: 50px;
+                margin-bottom: 20px;
+            }
         }
     }
     .hourly {

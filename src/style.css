@@ -385,13 +385,26 @@ img {
   flex-direction: column;
   border-radius: 15px;
   margin-right: 20px;
-  background-color: rgba(138, 202, 130, 0.664);
+  background-color: rgba(163, 219, 156, 0.664);
+  cursor: pointer;
+}
+.anothers .days .day img {
+  width: 50px;
+  margin-bottom: 20px;
 }
 .anothers .days .day__name {
   margin-bottom: 10px;
 }
 .anothers .days .day__data {
-  margin-bottom: 90px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.anothers .days .day__temp {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.anothers .days .day__status {
+  font-size: 13px;
 }
 .anothers .days .day--last {
   display: flex;
@@ -403,7 +416,12 @@ img {
   flex-direction: column;
   border-radius: 15px;
   margin-right: 0px;
-  background-color: rgba(138, 202, 130, 0.664);
+  background-color: rgba(163, 219, 156, 0.664);
+  cursor: pointer;
+}
+.anothers .days .day--last img {
+  width: 50px;
+  margin-bottom: 20px;
 }
 .anothers .hourly {
   margin-top: 30px;

@@ -15,43 +15,7 @@
                 
             </div>
             <div class="anothers hide">
-                <div class="anothers days">
-                    <div class="days day">
-                        <p class="day__name">Понеділок</p>
-                        <p class="day__data">23 травня</p>
-                        <img class="day__img" src="" alt="">
-                        <p class="day__temp">23</p>
-                        <p class="day__status">Хмарно</p>
-                    </div>
-                    <div class="days day">
-                        <p class="day__name">Понеділок</p>
-                        <p class="day__data">23 травня</p>
-                        <img class="day__img" src="" alt="">
-                        <p class="day__temp">23</p>
-                        <p class="day__status">Хмарно</p>
-                    </div>
-                    <div class="days day">
-                        <p class="day__name">Понеділок</p>
-                        <p class="day__data">23 травня</p>
-                        <img class="day__img" src="" alt="">
-                        <p class="day__temp">23</p>
-                        <p class="day__status">Хмарно</p>
-                    </div>
-                    <div class="days day">
-                        <p class="day__name">Понеділок</p>
-                        <p class="day__data">23 травня</p>
-                        <img class="day__img" src="" alt="">
-                        <p class="day__temp">23</p>
-                        <p class="day__status">Хмарно</p>
-                    </div>
-                    <div class="days day--last">
-                        <p class="day__name">Понеділок</p>
-                        <p class="day__data">23 травня</p>
-                        <img class="day__img" src="" alt="">
-                        <p class="day__temp">23</p>
-                        <p class="day__status">Хмарно</p>
-                    </div>
-                </div>
+                
                 <div class="hourly">
                     <h3 class="hourly__name">Найближчим часом</h3>
                     <div class="hourly info">
@@ -121,7 +85,6 @@
                                 <p class="feel_temp">27</p>
                             </div>
                         </div>
-                        <img src="pic/cloudy.png" alt="">
                         <div class="description wind">
                             <p class="wind_name">Вітер(км/год)</p>
                             <div class="block">
@@ -140,7 +103,7 @@
     </div>
     <script src="js/main.js"></script>
     <script>
-        new WeatherMaker('.wrapper', '.today').render();
+        new WeatherMaker('.wrapper', '.today', 'anothers').render();
     </script>
 </body>
 </html>
