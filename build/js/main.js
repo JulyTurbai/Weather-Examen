@@ -72,7 +72,7 @@ class Weather {
             this.urlHourly = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(informData.city)}&appid=e4522bc40bf8ee61bc50b1ef71160e25&lang=ua&units=metric`;
             this.getChooseHourlyWeather(this.urlHourly);
             this.urlAnothers = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(informData.city)}&appid=e4522bc40bf8ee61bc50b1ef71160e25&lang=ua&units=metric`;
-            this.getAnotherWeather(this.urlAnothers)
+           this.getAnotherWeather(this.urlAnothers)
         }
         
     }
@@ -80,8 +80,15 @@ class Weather {
 
     getCurrentWeather() {
          fetch('https://api.openweathermap.org/data/2.5/weather?q=Poltava&appid=e4522bc40bf8ee61bc50b1ef71160e25&lang=ua&units=metric')
-        .then(response => response.json())
-        .then(response => this.createCurrentWeather(response)) 
+         .then(response => {
+            if (response.status < 400) {
+                return response.json()
+            }
+            throw 'щось пішло не так';
+        })
+         .then(response => this.createCurrentWeather(response))
+         .catch(c => console.error(c))
+         .finally(() => console.log('все зроблено'));
     }
 
     getHourlyWeather() {
@@ -99,11 +106,23 @@ class Weather {
 
     getChooseCity() {
         fetch(this.urlCurrent)
-        .then(response => response.json())
-        .then(response => this.createCurrentWeather(response)) 
-        console.log(this.url)
+        .then(response => {
+            if (response.status < 400) {
+                this.wrapper.querySelector('.error img').classList.add('hide');
+                this.wrapper.querySelector('.weather-block').classList.remove('hide');
+                return response.json();
+            }
+            if (response.status == 404) {
+                this.wrapper.querySelector('.weather-block').classList.add('hide');
+                this.wrapper.querySelector('.error img').classList.remove('hide');
+            } 
+         })
+         .then(response => this.createCurrentWeather(response)) 
+         .catch(c => console.error(c))
+         .finally(() => console.log('все зроблено'));
     }
-    getChooseHourlyWeather() {
+    
+       getChooseHourlyWeather() {
         fetch(this.urlHourly)
         .then(response => response.json())
         .then(response => this.createHourlyWeather(response)) 
@@ -361,6 +380,22 @@ class Weather {
             this.anothers.insertAdjacentHTML('afterbegin', str);
     }
 
+    showWeather(event) {
+        let t = event.target;
+
+        if(t.matches(('.another'))) {
+            this.today.classList.add('hide');
+            this.anothers.classList.remove('hide');
+            this.wrapper.querySelector('.today').classList.remove('active');
+            this.wrapper.querySelector('.another').classList.add('active');
+        }
+        if(t.matches(('.today'))) {
+            this.today.classList.remove('hide');
+            this.anothers.classList.add('hide')
+            this.wrapper.querySelector('.another').classList.remove('active');
+        }
+    }
+
 
 
     init() {
@@ -370,6 +405,7 @@ class Weather {
         this.getHourlyWeather();
         this.getAnotherDaysWeather();
         this.form.addEventListener('submit', this.createChooseCity.bind(this));
+        this.wrapper.addEventListener('click', this.showWeather.bind(this))
     }
 }
 

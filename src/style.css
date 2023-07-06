@@ -28,12 +28,28 @@ img {
   background-color: rgba(149, 223, 160, 0.719);
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 10px auto;
+  top: 250px;
+  left: 200px;
+  position: absolute;
+}
+
+.error img {
+  width: 150%;
+}
+
 .wrapper {
   width: 900px;
   height: 970px;
   margin: 0px auto;
   background-color: rgb(227, 252, 220);
   border-radius: 20px;
+  position: relative;
 }
 
 .header {
