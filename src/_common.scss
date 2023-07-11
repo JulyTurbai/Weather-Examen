@@ -24,6 +24,7 @@ img {
 .active {
     background-color: rgba(149, 223, 160, 0.719)
 }
+
 .error {
     @include flex;
     width: 500px;
