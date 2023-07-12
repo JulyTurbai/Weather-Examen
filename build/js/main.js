@@ -114,9 +114,11 @@ class Weather {
         .then(response => this.createHourlyWeather(response))
     }
     getNearbyPlacesWeather() {
-        fetch('https://api.openweathermap.org/data/2.5/find?lat=49.5937&lon=34.5407&cnt=5&units=metric&appid=514dfb87f2b2c2278e57328fcefedff1&lang=ua')
-        .then(response => response.json())
-        .then(response => this.createNearlyPlaces(response))
+        setTimeout(() => {
+            fetch('https://api.openweathermap.org/data/2.5/find?lat=49.5937&lon=34.5407&cnt=5&units=metric&appid=514dfb87f2b2c2278e57328fcefedff1&lang=ua')
+            .then(response => response.json())
+            .then(response => this.createNearlyPlaces(response))
+        }, 100)
     }
     
     getAnotherDaysWeather() {
@@ -248,7 +250,6 @@ class Weather {
     } 
 
     createHourlyWeather(response) {
-       console.log(response)
         let str = `<div class="hourly">
                         <h3 class="hourly__name">Найближчим часом</h3>
                         <div class="hourly info">
