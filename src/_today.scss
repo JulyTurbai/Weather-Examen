@@ -71,6 +71,8 @@
        .info {
          .hours {
             &__name {
+                width: 120px;
+                margin-right: 20px;
                 height:0px;
                 font-size: 15px;
             }
@@ -99,14 +101,16 @@
         margin-top: 10px;
             .forecast {
             @include flex;
+            justify-content: flex-start;
+            .forecast_name {
+                font-size: 15px;
+                width: 145px;
+                margin-left: 0
+            }
                 .block {
                     @include flex;
-                    margin-left: 60px;
-                }
-                &_name {
-                    margin-right: 20px;
-                    margin-left: 20px;
-                    font-size: 15px;
+                    margin-left: 0px;
+                    max-width: 100%;
                 }
                 &_status {
                     margin-right: 50px;
@@ -114,6 +118,10 @@
                     width: 50px;
                     @include flex;
                 }
+                &_status--last {
+                    margin-right: 0;
+                }
+
             }
             .temperature {
                 margin-top: 30px;
@@ -155,7 +163,7 @@
         .wind {
             &_name {
                 height: 0px;
-                width: 90px;
+                max-width: 90px;
                 font-size: 15px;
             }
             .block {

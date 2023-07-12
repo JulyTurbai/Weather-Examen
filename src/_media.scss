@@ -5,9 +5,6 @@
     .weather {
         .wrapper {
             margin: 0 20px;
-            .header {
-                
-            }
         }
     }
 }
@@ -99,11 +96,13 @@
     .menu {
         padding: 0px 20px;
         .today {
+            height: 40px;
             width: 120px;
             font-size: 16px;
             padding: 5px 10px;
         }
         .another {
+            height: 40px;
             width: 300px;
             font-size: 16px;
             padding: 5px 10px;
@@ -118,6 +117,7 @@
         width: 50px;
      }
      .today {
+        margin: 10px 5px;
         .current {
             .main__block {
                 .temp__deg {
@@ -132,6 +132,11 @@
 }
 
 @media(max-width: 600px) {
+    .weather {
+        .wrapper {
+            margin: 0px;
+        }
+    }
     img {
         width: 50px;
      }
@@ -188,6 +193,7 @@
         .current {
             .main {
                 padding: 0 10px;
+                height: 40px;
             }
             .main__block {
                 display: flex;
@@ -228,7 +234,7 @@
                     }
                     .duration {
                         p {
-                            width: 90px;
+                            width: 70px;
                             margin-right: 5px;
                         }
                     }
@@ -301,8 +307,271 @@
      }
 }
             
-        
+// hourly
+
+@media(max-width: 840px) {
+    .today .hourly .info .hours .time__weather img {
+        width: 40px;
+        margin-top: 20px;
+    }
+    .today .hourly .info .hours .time__hour {
+        margin-right: 50px;
+        font-size: 13px;
+    }
+    .today .hourly .info .hours .time {
+        margin-left: 93px;
+    }
+    .today .hourly {
+        padding: 5px 20px;
+    }
+    .today .hourly .description .forecast_status {
+        margin-right: 49px;
+        font-size: 12px;
+    }
+    .today .hourly .description .forecast .block {
+        margin-left: 0px;
+    }
+    .today .hourly .description .forecast .forecast_name {
+        font-size: 15px;
+        width: 100px;
+        margin-left: 0;
+    }
+    .today .hourly .description .temperature {
+        margin-top: 26px;
+    }
+    .today .hourly .description .temperature_name {
+        font-size: 13px;
+    }
+    .today .hourly .feel_name {
+        font-size: 13px;
+    }
+    .today .hourly .wind_name {
+        font-size: 13px;
+    }
+    .today .hourly .description .temperature .block {
+        margin-left: 26px;
+    }
+    .today .hourly .feel .block {
+        margin-left: 24px;
+    }
+    .today .hourly .wind .block {
+        margin-left: 21px;
+    }
+}
+
+@media(max-width: 820px) {
+    .hourly {
+        padding: 10px 10px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .today .hourly {
+        padding: 5px 10px;
+    }
+    
+}
+@media(max-width: 800px) {
+    .today .hourly .info .hours .time__weather {
+        width: 80px;
+    }
+    .today .hourly .description .forecast_status {
+        margin-right: 30px;
+    }
+    .today .hourly .description .forecast .forecast_name {
+        width: 165px;
+    }
+    .today .hourly .description .temperature_degrees {
+        width: 80px;
+        font-size: 14px;
+    }
+    .today .hourly .feel_temp {
+        width: 80px;
+    }
+    .today .hourly .description .temperature_name {
+        font-size: 13px;
+        margin-right: 50px;
+    }
+    .today .hourly .description .temperature .block {
+        margin-left: 45px;
+    }
+    .today .hourly .feel .block {
+        margin-left: 45px;
+    }
+    .today .hourly .wind_km {
+        width: 80px;
+    }
+    .today .hourly .wind .block {
+    margin-left: 37px;
+}
+}
+
+@media(max-width: 790px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 155px;
+    }
+}
+@media(max-width: 760px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 145px;
+    }
+}
+@media(max-width: 740px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 135px;
+    }
+}
+@media(max-width: 720px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 125px;
+    }
+}
+@media(max-width: 700px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 115px;
+    }
+}
+@media(max-width: 680px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 105px;
+    }
+}
+@media(max-width: 650px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 105px;
+    }
+    .today .hourly .info .hours .time__weather {
+        width: 70px;
+    }
+    .today .hourly .description .forecast_status {
+        margin-right: 20px;
+    }
+    .today .hourly .description .forecast .forecast_name {
+        width: 117px;
+    }
+    .today .hourly .description .temperature_degrees {
+        width: 70px;
+        font-size: 14px;
+    }
+    .today .hourly .feel_temp {
+        width: 70px;
+    }
+    .today .hourly .wind_km {
+        width: 71px;
+    }
+}
+ 
+@media(max-width: 560px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 95px;
+    }
+}
+@media(max-width: 650px) {
+    .today .hourly {
+        padding: 10px 10px;
+    }
+    .today .hourly .info .hours .time__weather img {
+        width: 30px;
+        margin-top: 10px;
+    }
+    .today .hourly .description .forecast_status {
+        margin-right: 15px;
+    }
+    .today .hourly .feel_name {
+        font-size: 11px;
+    }
+    .today .hourly .description .forecast .forecast_name {
+        font-size: 11px;
+    }
+    .today .hourly .description .temperature_name {
+        font-size: 11px;
+        margin-right: 50px;
+    }
+    .today .hourly .wind_name {
+        font-size: 11px;
+    }
+    .today .hourly .description .forecast .forecast_name {
+        width: 117px;
+    }
+    .today .hourly .description .forecast_status {
+        margin-right: 20px;
+    }
+}
+@media(max-width: 620px) {
+    .today .hourly .info .hours .time__weather {
+        width: 55px;
+    }
+    
+    .today .hourly .description .forecast_status {
+        margin-right: 10px;
+        font-size: 11px;
+    }
+    .today .hourly .description .forecast .forecast_name {
+        width: 130px;
+    }
+    .today .hourly .description .temperature_degrees {
+        width: 60px;
+        font-size: 14px;
+    }
+    .today .hourly .description .temperature .block {
+        margin-left: 65px;
+    }
+    .today .hourly .feel_temp {
+        width: 60px;
+    }
+    .today .hourly .feel .block {
+        margin-left: 63px;
+    }
+    .today .hourly .wind_km {
+        width: 60px;
+    }
+    .today .hourly .wind .block {
+        margin-left: 59px;
+    }
+    .today .hourly .info .hours__name {
+        width: 120px;
+        margin-right: 20px;
+        height: 0px;
+        font-size: 11px;
+    }
+}
+
+@media(max-width: 450px) {
+    .today .hourly .description .forecast .forecast_name {
+        width: 95px;
+    }
+    .today .hourly .info .hours .time__hour {
+        margin-right: 50px;
+        font-size: 11px;
+    }
+    .today .hourly {
+        padding: 5px 10px;
+    }
+    .today .hourly .info .hours .time__weather img {
+        width: 25px;
+        margin-top: 10px;
+    }
+    .today .hourly .description .forecast_status {
+        margin-right: 9px;
+        font-size: 9px;
+    }
+    .today .hourly .description .temperature_degrees {
+        width: 60px;
+        font-size: 11px;
+    }
+    .today .hourly .feel_temp {
+        font-size: 11px;
+    }
+    .today .hourly .wind_km {
+        font-size: 11px;
+    }
+}
+
+@media(max-width: 420px) {
+    .today .hourly .description .forecast_status {
+        margin-right: 15px;
+        font-size: 9px;
+    }
     
     
-
-
+}

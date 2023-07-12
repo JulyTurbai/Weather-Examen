@@ -250,7 +250,7 @@ class Weather {
     } 
 
     createHourlyWeather(response) {
-        let str = `<div class="hourly hide">
+        let str = `<div class="hourly">
                         <h3 class="hourly__name">Найближчим часом</h3>
                         <div class="hourly info">
                             <div class="info hours">
@@ -287,14 +287,14 @@ class Weather {
                         </div>
                         <div class="hourly description">
                             <div class="description forecast">
-                                <p class="forecast_name">Прогноз</p>
                                 <div class="block">
+                                <p class="forecast_name">Прогноз</p>
                                     <p class="forecast_status">${response.list[6].weather[0].description}</p>
                                     <p class="forecast_status">${response.list[7].weather[0].description}</p>
                                     <p class="forecast_status">${response.list[8].weather[0].description}</p>
                                     <p class="forecast_status">${response.list[9].weather[0].description}</p>
                                     <p class="forecast_status">${response.list[10].weather[0].description}</p>
-                                    <p class="forecast_status">${response.list[11].weather[0].description}</p>
+                                    <p class="forecast_status forecast_status--last">${response.list[11].weather[0].description}</p>
                                 </div>
                             </div>
                             <div class="description temperature">
