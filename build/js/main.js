@@ -337,7 +337,7 @@ class Weather {
     }
 
     createNearlyPlaces(response) {
-        let str = `<div class="nearby-places hide">
+        let str = `<div class="nearby-places">
                         <p class="nearby-places__name">
                             Найближчі міста
                         </p>
