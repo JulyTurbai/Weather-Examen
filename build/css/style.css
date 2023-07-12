@@ -909,34 +909,6 @@ img {
   }
 }
 @media (max-width: 600px) {
-  .weather .wrapper .header .logo {
-    font-size: 18px;
-    margin-right: 5px;
-  }
-}
-@media (max-width: 470px) {
-  .weather .wrapper .header input {
-    border-radius: 20px;
-    width: 150px;
-    height: 30px;
-    padding: 10px;
-    border: none;
-    background-color: rgba(213, 247, 216, 0.801);
-  }
-}
-@media (max-width: 460px) {
-  .weather .wrapper .header .logo {
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  .weather .wrapper .header .location {
-    margin-right: 30px;
-  }
-}
-@media (max-width: 420px) {
-  .weather .wrapper {
-    margin: 0 5px;
-  }
   .weather .wrapper .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -957,7 +929,45 @@ img {
   }
   .weather .wrapper .header .logo {
     font-size: 16px;
+    margin-right: 5px;
     margin-bottom: 10px;
+  }
+  .weather .wrapper .header input {
+    border-radius: 20px;
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    background-color: rgba(213, 247, 216, 0.801);
+  }
+}
+@media (max-width: 470px) {
+  .weather .wrapper .header input {
+    border-radius: 20px;
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    background-color: rgba(213, 247, 216, 0.801);
+  }
+}
+@media (max-width: 460px) {
+  .weather .wrapper .header .logo {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .weather .wrapper .header .location {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 420px) {
+  .weather .wrapper {
+    margin: 0 5px;
+  }
+  .weather .wrapper .header .logo {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-right: 20px;
   }
   .weather .wrapper .header input {
     border-radius: 20px;
@@ -966,6 +976,210 @@ img {
     padding: 10px;
     border: none;
     background-color: rgba(213, 247, 216, 0.801);
+  }
+}
+@media (max-width: 450px) {
+  .menu {
+    padding: 0px 20px;
+  }
+  .menu .today {
+    width: 120px;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  .menu .another {
+    width: 300px;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 650px) {
+  img {
+    width: 50px;
+  }
+  .today .current .main__block .temp__deg {
+    font-size: 19px;
+  }
+  .today .current .main__block .temp__feel {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  img {
+    width: 50px;
+  }
+  .today .current .main__block {
+    padding: 0px 15px;
+  }
+  .today .current .main__block .position__descr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .today .current .main__block .temp__deg {
+    font-size: 19px;
+    margin-top: 10px;
+  }
+  .today .current .main__block .temp__feel {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .today .current .main__block .day-descr p {
+    margin-right: 10px;
+  }
+  .today .current .main__block .day-descr .sunrise p {
+    width: 64px;
+    margin-right: 20px;
+  }
+  .today .current .main__block .day-descr .sunset p {
+    width: 70px;
+    margin-right: 14px;
+  }
+  .today .current .main__block .day-descr .duration p {
+    width: 70px;
+    margin-right: 14px;
+  }
+}
+@media (max-width: 460px) {
+  img {
+    width: 40px;
+  }
+  .today .current .main {
+    padding: 0 10px;
+  }
+  .today .current .main__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .today .current .main__block .position__descr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  .today .current .main__block .temp__deg {
+    font-size: 19px;
+    margin-top: 5px;
+  }
+  .today .current .main__block .temp__feel {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .today .current .main__block .day-descr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .today .current .main__block .day-descr p {
+    margin-right: 10px;
+  }
+  .today .current .main__block .day-descr .sunrise {
+    margin-right: 10px;
+  }
+  .today .current .main__block .day-descr .sunrise p {
+    width: 64px;
+    margin-right: 5px;
+  }
+  .today .current .main__block .day-descr .sunset {
+    margin-right: 10px;
+  }
+  .today .current .main__block .day-descr .sunset p {
+    width: 70px;
+    margin-right: 5px;
+  }
+  .today .current .main__block .day-descr .duration p {
+    width: 90px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 380px) {
+  img {
+    width: 40px;
+  }
+  .today .current .main {
+    padding: 0 20px;
+  }
+  .today .current .main__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .today .current .main__block .position__descr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  .today .current .main__block .temp__deg {
+    font-size: 19px;
+    margin-top: 5px;
+  }
+  .today .current .main__block .temp__feel {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .today .current .main__block .day-descr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .today .current .main__block .day-descr p {
+    margin-right: 10px;
+  }
+  .today .current .main__block .day-descr .sunrise {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-right: 20px;
+  }
+  .today .current .main__block .day-descr .sunrise p {
+    width: 64px;
+    margin-right: 5px;
+  }
+  .today .current .main__block .day-descr .sunset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .today .current .main__block .day-descr .sunset p {
+    width: 70px;
+  }
+  .today .current .main__block .day-descr .duration {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .today .current .main__block .day-descr .duration p {
+    width: 90px;
+    margin-right: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */

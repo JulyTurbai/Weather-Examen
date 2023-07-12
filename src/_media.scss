@@ -1,3 +1,6 @@
+
+// header
+
 @media(max-width: 950px) {
     .weather {
         .wrapper {
@@ -13,10 +16,23 @@
     .weather {
         .wrapper {
             .header {
+                @include flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                padding: 10px;
                 .logo {
-                    font-size: 18px;
+                    font-size: 16px;
                     margin-right: 5px;
+                    margin-bottom: 10px;
                 }
+                input {
+                    border-radius: 20px;
+                    width: 250px;
+                    height: 30px;
+                    padding: 10px;
+                    border: none;
+                    background-color: rgba(213, 247, 216, 0.801);
+               }
             }
         }
     }
@@ -28,7 +44,7 @@
             .header {
                input {
                      border-radius: 20px;
-                     width: 150px;
+                     width: 250px;
                      height: 30px;
                      padding: 10px;
                      border: none;
@@ -48,7 +64,7 @@
                     margin-right: 10px;
                 }
                .location {
-                margin-right: 30px;
+                margin-right: 0px;
                }
             }
         }
@@ -59,13 +75,10 @@
         .wrapper {
             margin: 0 5px;
             .header {
-                @include flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                padding: 10px;
                 .logo {
                     font-size: 16px;
                     margin-bottom: 10px;
+                    margin-right: 20px;
                 }
                input {
                 border-radius: 20px;
@@ -79,3 +92,217 @@
         }
     }
 }
+
+// menu
+
+@media(max-width: 450px) {
+    .menu {
+        padding: 0px 20px;
+        .today {
+            width: 120px;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+        .another {
+            width: 300px;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+// current
+
+@media(max-width: 650px) {
+    img {
+        width: 50px;
+     }
+     .today {
+        .current {
+            .main__block {
+                .temp__deg {
+                    font-size: 19px;
+                }
+                .temp__feel {
+                    font-size: 14px;
+                }
+            }
+        }
+     }
+}
+
+@media(max-width: 600px) {
+    img {
+        width: 50px;
+     }
+     .today {
+        .current {
+            .main__block {
+                padding: 0px 15px;
+                .position__descr {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                }
+                .temp__deg {
+                    font-size: 19px;
+                    margin-top: 10px;
+                }
+                .temp__feel {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                }
+                .day-descr {
+                    p {
+                        margin-right: 10px;
+                    }
+                    .sunrise {
+                        p {
+                            width: 64px;
+                            margin-right: 20px;
+                        }
+                    }
+                    .sunset {
+                        p {
+                            width: 70px;
+                            margin-right: 14px;
+                        }
+                    }
+                    .duration {
+                        p {
+                            width: 70px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+     }
+}
+
+@media(max-width: 460px) {
+    img {
+        width: 40px;
+     }
+     .today {
+        .current {
+            .main {
+                padding: 0 10px;
+            }
+            .main__block {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                .position__descr {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-size: 13px;
+                }
+                .temp__deg {
+                    font-size: 19px;
+                    margin-top: 5px;
+                }
+                .temp__feel {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                }
+                .day-descr {
+                    display: flex;
+                    
+                    p {
+                        margin-right: 10px;
+                    }
+                    .sunrise {
+                        margin-right: 10px;
+                        p {
+                            width: 64px;
+                            margin-right: 5px;
+                        }
+                    }
+                    .sunset {
+                        margin-right: 10px;
+                        p {
+                            width: 70px;
+                            margin-right: 5px;
+                        }
+                    }
+                    .duration {
+                        p {
+                            width: 90px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+     }
+}
+
+@media(max-width: 380px) {
+    img {
+        width: 40px;
+     }
+     .today {
+        .current {
+            .main {
+                padding: 0 20px;
+            }
+            .main__block {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                .position__descr {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-size: 13px;
+                }
+                .temp__deg {
+                    font-size: 19px;
+                    margin-top: 5px;
+                }
+                .temp__feel {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                }
+                .day-descr {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    p {
+                        margin-right: 10px;
+                    }
+                    .sunrise {
+                        display: flex;
+                        flex-direction: row;
+                        margin-right: 20px;
+                        p {
+                            width: 64px;
+                            margin-right: 5px;
+                        }
+                    }
+                    .sunset {
+                        display: flex;
+                        flex-direction: row;
+                        p {
+                            width: 70px;
+                        }
+                    }
+                    .duration {
+                        display: flex;
+                        flex-direction: row;
+                        p {
+                            width: 90px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+     }
+}
+            
+        
+    
+    
+
+

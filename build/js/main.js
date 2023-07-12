@@ -214,7 +214,7 @@ class Weather {
         this.today.innerHTML = '';
 
             let str = `<div class="current">
-                            <div class="current main">
+                            <div class="current main hide">
                                 <h3 class="main__name">Поточна погода</h3>
                                     <span class="main__data">${this.date}</span>
                             </div>
@@ -250,7 +250,7 @@ class Weather {
     } 
 
     createHourlyWeather(response) {
-        let str = `<div class="hourly">
+        let str = `<div class="hourly hide">
                         <h3 class="hourly__name">Найближчим часом</h3>
                         <div class="hourly info">
                             <div class="info hours">
@@ -337,7 +337,7 @@ class Weather {
     }
 
     createNearlyPlaces(response) {
-        let str = `<div class="nearby-places">
+        let str = `<div class="nearby-places hide">
                         <p class="nearby-places__name">
                             Найближчі міста
                         </p>
@@ -374,7 +374,7 @@ class Weather {
         data = d.getDay() + ':' + d.getMonth();
         this.anothers.innerHTML = '';
         this.dataId = this.date
-        let str = `<div class="anothers days">
+        let str = `<div class="anothers days hide">
                         <div class="days day day--one day-active" data-id="${response.list[0].dt_txt.split(' ')[0]}" data-lat="${response.city.coord.lat}" data-lon="${response.city.coord.lon}"">
                             <p class="day__data">${response.list[0].dt_txt.split(' ')[0]}</p>
                             <img src="pic/${response.list[0].weather[0].main}.png" alt="">
@@ -414,7 +414,7 @@ class Weather {
     createAnothersHourlyWeather(response, num1, num2, num3, num4, num5, num6) {
         this.anothers.querySelector('.block-hourly').innerHTML = ''; 
        
-        let str = `<div class="hourly">
+        let str = `<div class="hourly hide">
                         <h3 class="hourly__name"></h3>
                         <div class="hourly info">
                             <div class="info hours">
