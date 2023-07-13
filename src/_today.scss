@@ -6,6 +6,7 @@
         max-width: 100%;
         background-color: rgb(194, 240, 197);
         border-radius: 20px;
+        padding: 10px 30px;
         .main {
             @include flex;
             justify-content: space-between;
@@ -64,7 +65,7 @@
     }
     .hourly {
         margin-top: 20px;
-        width: 100%;
+        max-width: 100%;
         background-color: rgb(194, 240, 197);
         padding: 15px 20px;
         border-radius: 20px;
@@ -78,7 +79,7 @@
             }
             .time {
                 @include flex;
-                margin-left: 160px;
+                margin-left: 142px;
                 &__weather {
                     @include flex;
                     flex-wrap: wrap;
@@ -93,6 +94,9 @@
                 &__hour {
                     margin-right: 90px;
                     font-size: 13px;
+                }
+                .time__hour--last {
+                    margin-right: 0;
                 }
             }
          }
@@ -218,11 +222,16 @@
     }
 }
 
+
 .weather-block {
     .anothers {
         .hourly {
             padding: 10px 20px;
+            .block {
+                margin-right: 0;
+            }
             .info {
+                max-width: 100%;
                 .hours {
                     &__name {
                         height:0px;
@@ -230,7 +239,7 @@
                     }
                 .time {
                     @include flex;
-                    margin-left: 160px;
+                    margin-left: 139px;
                     &__weather {
                         @include flex;
                         flex-wrap: wrap;
@@ -248,12 +257,33 @@
                         margin-right: 90px;
                         font-size: 13px;
                         }
+                    &__hour--last {
+                            margin-right: 0px;
+                        }
                     }
                 }
             }
             .description  {
                 margin-top: 15px;
+                .forecast {
+                    .block {
+                        margin-left: 0px;
+                        max-width: 100%;
+                    }
+                }
+                .forecast_name {
+                    margin-right: 81px;
+                    margin-left: 0px;
+                    font-size: 15px;
+                }
+                .forecast_status {
+                    width: 55px;
+                }
+                .forecast_status--last {
+                    margin-right: 0;
+                }
             }
         }
     }
 }
+

@@ -118,7 +118,7 @@ class Weather {
             fetch('https://api.openweathermap.org/data/2.5/find?lat=49.5937&lon=34.5407&cnt=5&units=metric&appid=514dfb87f2b2c2278e57328fcefedff1&lang=ua')
             .then(response => response.json())
             .then(response => this.createNearlyPlaces(response))
-        }, 100)
+        }, 200)
     }
     
     getAnotherDaysWeather() {
@@ -214,7 +214,7 @@ class Weather {
         this.today.innerHTML = '';
 
             let str = `<div class="current">
-                            <div class="current main hide">
+                            <div class="current main">
                                 <h3 class="main__name">Поточна погода</h3>
                                     <span class="main__data">${this.date}</span>
                             </div>
@@ -279,7 +279,7 @@ class Weather {
                                         <img src="pic/${response.list[10].weather[0].main}.png" alt="">
                                     </div>
                                     <div class="time__weather">
-                                        <p class="time__hour">21:00</p>
+                                        <p class="time__hour time__hour--last">21:00</p>
                                         <img src="pic/${response.list[11].weather[0].main}.png" alt="">
                                     </div>
                                 </div>
@@ -374,7 +374,7 @@ class Weather {
         data = d.getDay() + ':' + d.getMonth();
         this.anothers.innerHTML = '';
         this.dataId = this.date
-        let str = `<div class="anothers days hide">
+        let str = `<div class="anothers days">
                         <div class="days day day--one day-active" data-id="${response.list[0].dt_txt.split(' ')[0]}" data-lat="${response.city.coord.lat}" data-lon="${response.city.coord.lon}"">
                             <p class="day__data">${response.list[0].dt_txt.split(' ')[0]}</p>
                             <img src="pic/${response.list[0].weather[0].main}.png" alt="">
@@ -414,7 +414,7 @@ class Weather {
     createAnothersHourlyWeather(response, num1, num2, num3, num4, num5, num6) {
         this.anothers.querySelector('.block-hourly').innerHTML = ''; 
        
-        let str = `<div class="hourly hide">
+        let str = `<div class="hourly">
                         <h3 class="hourly__name"></h3>
                         <div class="hourly info">
                             <div class="info hours">
@@ -443,7 +443,7 @@ class Weather {
                                         <img src="pic/${response.list[num5].weather[0].main}.png" alt="">
                                     </div>
                                     <div class="time__weather">
-                                        <p class="time__hour">21:00</p>
+                                        <p class="time__hour time__hour--last">21:00</p>
                                         <img src="pic/${response.list[num6].weather[0].main}.png" alt="">
                                     </div>
                                 </div>
@@ -458,7 +458,7 @@ class Weather {
                                     <p class="forecast_status">${response.list[num3].weather[0].description}</p>
                                     <p class="forecast_status">${response.list[num4].weather[0].description}</p>
                                     <p class="forecast_status">${response.list[num5].weather[0].description}</p>
-                                    <p class="forecast_status">${response.list[num6].weather[0].description}</p>
+                                    <p class="forecast_status forecast_status--last">${response.list[num6].weather[0].description}</p>
                                 </div>
                             </div>
                             <div class="description temperature">
