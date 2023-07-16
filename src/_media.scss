@@ -637,3 +637,18 @@
         margin-bottom: 10px;
     }
 }
+
+
+// error
+
+@media(max-width: 940px) {
+    .error {
+        width: 130%;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .error img {
+        width: 95%;
+    }
+}

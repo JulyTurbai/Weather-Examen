@@ -34,9 +34,8 @@ img {
   align-items: center;
   width: 500px;
   margin: 10px auto;
-  top: 250px;
-  left: 200px;
-  position: absolute;
+  top: 150px;
+  left: 0px;
 }
 
 .error img {
@@ -49,7 +48,6 @@ img {
   margin: 0px auto;
   background-color: rgb(227, 252, 220);
   border-radius: 20px;
-  position: relative;
 }
 
 .header {
@@ -1197,5 +1195,16 @@ img {
   .anothers .days .day:last-child img {
     width: 45px;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 940px) {
+  .error {
+    width: 130%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .error img {
+    width: 95%;
   }
 }/*# sourceMappingURL=style.css.map */
